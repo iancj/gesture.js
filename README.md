@@ -7,6 +7,8 @@ make the elements can scaling,rotatiton and translation
 ### Demo
 <a href="http://iancj.github.io/gesture.js/" target="_blank">Click Here</a>
 
+<img src="qrcode.png" alt="">
+
 ### 使用方法
 
 项目中引入gesture.js
