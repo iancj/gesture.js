@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+	<title>Demo gesture.js</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="e"><img src="bg.png"></div>
+
+	<section class="console">
+		<a href="javascrip:;" id="getStatus">getStatus</a>
+		<p id="getStatus-con"></p>
+	</section>
+
+	<script src="gesture.js"></script>
+	<script>
+	//simple selector
+	function $(selector, parentsNode) {
+	    parentsNode ? parentsNode = parentsNode : parentsNode = document;
+	    var ele = parentsNode.querySelectorAll(selector);
+	    if (ele.length == 1) ele = ele[0];
+	    return ele;
+	}
+
+	var $e = $("#e");
+	var dragable = new Dragable($e);
+
+	$("#getStatus").addEventListener("touchstart",function(){
+	    $("#getStatus-con").innerHTML=JSON.stringify(dragable.getStatus());
+	},false)
+	</script>
+</body>
+</html>
